@@ -97,6 +97,7 @@ body {
   align-items: center;
 }
 
+
 /*logo*/
 .logo {
   font-family: var(--secondary-font);
@@ -195,6 +196,13 @@ ul {
 
   padding-top: 188px;
   padding-bottom: 188px;
+  margin-right: auto;
+  margin-left: auto;
+  /*background-image: url(../images/people-office\ 1.jpg);*/
+  background-size: cover;
+  background-position: center;
+  width: 1440px;
+  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
 }
 
 .hero-button {
@@ -228,12 +236,22 @@ ul {
   margin-right: auto;
 }
 
+
+
+
 /*section 1*/
 
 .link-style {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.link-style-background::before {
+  display: block;
+  content: '' ;
+  height: 112px;
+  background-color: var(--background-light);
 }
 
 .feature {
