@@ -11,7 +11,7 @@
   --light-text-color: #e7e9fc;
   --button-text-color: #ffffff;
   --button-click-color: #404bbf;
-
+  --customers-icon-color: #8e8f99;
   /* background colors*/
 
   --background-dark: #2e2f42;
@@ -96,7 +96,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 
 /*logo*/
 .logo {
@@ -185,6 +184,8 @@ ul {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 /*hero*/
@@ -202,7 +203,11 @@ ul {
   background-size: cover;
   background-position: center;
   width: 1440px;
-  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
 }
 
 .hero-button {
@@ -234,10 +239,8 @@ ul {
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
+  
 }
-
-
-
 
 /*section 1*/
 
@@ -247,11 +250,10 @@ ul {
   gap: 24px;
 }
 
-.link-style-background::before {
-  display: block;
-  content: '' ;
-  height: 112px;
+.icon-link {
   background-color: var(--background-light);
+  padding: 24px 100px;
+  margin-bottom: 8px;
 }
 
 .feature {
@@ -317,9 +319,44 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.link-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  color: var(--background-light);
+}
+
+.link-social:hover,
+.link-social:focus {
+  background-color: var(--button-click-color);
+}
+
+.socials-icon {
+  fill: var(--background-light);
 }
 
 /*footer*/
+
+.link-social-footer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-list {
+  gap: 16px;
+}
 
 .background-footer {
   background: var(--background-dark);
@@ -338,6 +375,55 @@ ul {
 .footer-block {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.footer-h {
+  color: var(--button-text-color);
+  font-family: "Roboto";
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-section {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-social {
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+/* selection 4 */
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-icon {
+  fill: var(--customers-icon-color);
+
+  border: 1px solid var(--customers-icon-color);
+  padding: 16px 32px;
+  width: 168px;
+  height: 88px;
+}
+
+.customers-icon:hover,
+.customers-icon:focus {
+  color: var(--button-click-color);
+  fill: currentColor;
+  border: 1px solid var(--button-click-color);
+}
+
+.customers-name {
+  margin-top: 10px;
+  margin-bottom: 72px;
 }
 
 /*button*/
@@ -397,10 +483,22 @@ ul {
 }
 .team-card {
   margin-left: 24px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .projeckt-link {
   width: calc((100% - 2 * 24px) / 3);
+  border: 1px solid var(--background-image);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.projeckt-link:hover,
+.projeckt-link:focus {
+  border: 0.5px solid var(--background-light);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-wrapper {
