@@ -252,7 +252,10 @@ ul {
 
 .icon-link {
   background-color: var(--background-light);
-  padding: 24px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 112px;
   margin-bottom: 8px;
 }
 
@@ -358,8 +361,16 @@ ul {
   gap: 16px;
 }
 
+.link-social-footer:hover,
+.link-social-footer:focus {
+  background-color: #31D0AA;
+}
+
+
 .background-footer {
   background: var(--background-dark);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-text {
   color: var(--light-text-color);
@@ -372,10 +383,9 @@ ul {
   padding-top: 16px;
 }
 
-.footer-block {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+/* .footer-block {
+  
+} */
 
 .footer-h {
   color: var(--button-text-color);
@@ -392,34 +402,44 @@ ul {
   gap: 120px;
 }
 
-.footer-social {
-  padding-top: 100px;
-  padding-bottom: 130px;
-}
 
 /* selection 4 */
 
-.customers-link {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.customers-icon {
-  fill: var(--customers-icon-color);
-
-  border: 1px solid var(--customers-icon-color);
-  padding: 16px 32px;
+.customers-links {
   width: 168px;
   height: 88px;
 }
 
-.customers-icon:hover,
-.customers-icon:focus {
+.section-customers{ 
+  width: 100%;
+  height: 100%;
+  color: var(--customers-icon-color);
+  border: 1px solid var(--customers-icon-color);
+  border-radius: 4px;
+  display: flex; 
+  justify-content: center;
+ align-items: center;
+}
+.customers-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 24px;
+}
+
+.customers-icon { 
+  fill: currentColor
+
+  
+}
+
+.section-customers:hover,
+.section-customers:focus {
   color: var(--button-click-color);
-  fill: currentColor;
   border: 1px solid var(--button-click-color);
 }
+
+
 
 .customers-name {
   margin-top: 10px;
@@ -496,7 +516,7 @@ ul {
 
 .projeckt-link:hover,
 .projeckt-link:focus {
-  border: 0.5px solid var(--background-light);
+  
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -517,3 +537,8 @@ ul {
   border-top: none;
 }
   
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+  color: var(--background-dark);
+}
